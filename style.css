@@ -60,7 +60,7 @@ h1 {
 }
 
 body{
-    width: 1000px;
+    width: 810px;
     margin: auto;
     
 }
@@ -126,4 +126,11 @@ body{
 #nine4 {
     display: inline-block;
     float: left;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    
+    height: auto
 }
