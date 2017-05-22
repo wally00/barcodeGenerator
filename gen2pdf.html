@@ -4,20 +4,27 @@
 <head>
     <title>gen2pdf</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="jquery-ui.min.css">
+    <script src="js/jquery-3.2.1.slim.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
 </head>
 
 <body>
     <div id="a4page">
         <div class="nineCodes" id="nine1">
-            <div id="code11" class="codeA4"></div>
-            <div id="code12" class="codeA4"></div>
-            <div id="code13" class="codeA4"></div>
-            <div id="code14" class="codeA4"></div>
-            <div id="code15" class="codeA4"></div>
-            <div id="code16" class="codeA4"></div>
-            <div id="code17" class="codeA4"></div>
-            <div id="code18" class="codeA4"></div>
-            <div id="code19" class="codeA4"></div>
+            <div id="code11" class="codeA4 draggable">
+                <img dragable="true" ondragstart="drag(event)" id="img1" src="http://www.placehold.it/200x100">
+            </div>
+            <div id="code12" class="codeA4 draggable">
+                <img dragable="true" ondragstart="drag(event)" id="img2" src="http://www.placehold.it/200x100">
+            </div>
+            <div id="code13" class="codeA4 draggable"></div>
+            <div id="code14" class="codeA4 draggable"></div>
+            <div id="code15" class="codeA4 draggable"></div>
+            <div id="code16" class="codeA4 draggable"></div>
+            <div id="code17" class="codeA4 draggable"></div>
+            <div id="code18" class="codeA4 draggable"></div>
+            <div id="code19" class="codeA4 draggable"></div>
         </div>
 
         <div class="nineCodes" id="nine2">
@@ -62,5 +69,26 @@
     <a href="index.html">index.html</a>
     </div>
 </body>
-
+    <script>
+        $(function(){
+            $('.draggable').draggable({ grid :[20,20]});
+        });
+    </script>
+<!--<script type="text/javascript">
+    
+    function allowDrop(ev){
+        ev.preventDefault();
+    }
+    
+    function drag(ev){
+        ev.dataTransfer.setData('text', ev.target.id);
+    }
+    
+    function drop(ev){
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData('text');
+        ev.target.appendChild(document.getElementById(data));
+    }
+    
+    </script> -->
 </html>
