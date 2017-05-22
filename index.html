@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Barcode Generator</title>
+    <script src="js/JsBarcode.all.min.js" type="text/javascript"></script>
+    <script src="js/html2canvas.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <h1>BARCODE GENERATOR</h1>
+    <div id="generator">
+        <div id="genInput">
+            <form>
+                <input class="inputBox" type="text" id="nume" placeholder="numeVanzator"><br>
+                <input class="inputBox" type="text" id="code" placeholder="codVanzator"><br>
+                <button class="inputBox" id="submitBtn" type="button">Genereaza Codul</button>
+
+            </form>
+        </div>
+        <div id="genCode">
+            <div id="fullCode">
+                <p id="genName"></p>
+                <svg id="barcode">
+            
+        </svg>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        //
+
+        /*      document.getElementById('code').onkeypress = function(){
+                  
+                  alert('it works');
+              }
+         */
+
+        //JS code to generate the barcode and image
+        var submitBtn = document.getElementById('submitBtn');
+
+        submitBtn.onclick = function() {
+            var genName = document.getElementById('nume').value;
+
+            //removing the previous generated code(the fn code is @bottom)
+            remove();
+
+            var genValue = document.getElementById('code').value;
+            document.getElementById('genName').innerHTML = genName;
+            JsBarcode('#barcode', genValue, {
+                height: 60,
+                width: 2
+            });
+            //unhide the fullCode element
+            var fullCode = document.getElementById('fullCode');
+            fullCode.style.display = 'block';
+
+
+
+            //render the fullCode element to canvas(img) and append to genCode element
+            var renderedImg = html2canvas(document.getElementById('fullCode'), {
+                onrendered: function(canvas) {
+                    var fullCode = document.getElementById('genCode');
+
+                    canvas.setAttribute('id', 'canvasElement');
+                    fullCode.appendChild(canvas);
+
+
+                }
+
+            });
+
+            //hide the fullCode element to display only the Generated image
+            fullCode.style.display = 'none';
+
+
+        };
+
+        //        var clearBtn = document.getElementById('clearBtn');
+        //        clearBtn.onclick = remove;
+
+
+        //function that removes the last image generated
+        function remove() {
+            var genCode = document.getElementById('canvasElement');
+            if (genCode != null) {
+                genCode.remove();
+                //  console.log('deleted');
+            }
+
+
+
+        }
+
+    </script>
+<p><a href="gen2pdf.html">gen2pdf.html</a></p>
+</body>
+
+</html>

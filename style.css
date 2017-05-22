@@ -1,0 +1,129 @@
+#generator {
+    border: 2px solid black;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: yellow;
+    height: 150px;
+    width: 680px;
+}
+
+#genInput {
+    border: 0px solid blue;
+    display: inline;
+    width: 49%;
+    height: 99%;
+    float: left;
+    text-align: center;
+}
+
+#genCode {
+    border: 0px solid red;
+    display: inline;
+    width: 50%;
+    height: 99%;
+    float: right;
+    text-align: center;
+    background-color: white;
+}
+
+.inputBox {
+    padding: 10px 15px;
+    margin-right: 0;
+    width: 200px;
+    margin: auto;
+    margin: 5px 20px;
+}
+
+#barcode {
+    width: auto;
+    margin: auto;
+    padding: 10px;
+    padding-top: 0;
+    padding-bottom: 0;
+    border: 1px solid black;
+}
+
+#genCode {
+    border-bottom-right-radius: 20px;
+}
+
+#genName {
+    font: 20px monospace;
+    margin-bottom: 0px;
+    margin-top: 20px;
+}
+
+h1 {
+    width: 100%;
+    margin: auto;
+    text-align: center
+}
+
+body{
+    width: 900px;
+    margin: auto;
+    
+}
+
+#toImg {
+    padding: 10px 20px;
+}
+
+#submitBtn {
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+#fullCode {
+    width: 320px;
+    margin: auto;
+    background-color: white;
+    display: none;
+}
+
+#canvasElement {
+    margin-top: 10px;
+}
+
+#a4page {
+    display: block;
+    background-color: antiquewhite;
+    size: a4 landscape;
+    border: 1px solid black;
+}
+
+.codeA4 {
+    width: 200px;
+    height: 131px;
+    border: 1px solid black;
+    display: block
+}
+
+.nineCodes {
+    float: left;
+    width: 200px;
+    height: 1188px;
+    margin-top: 10px;
+    background-color: aqua;
+    border: 1px solid red;
+}
+
+#nine1 {
+    display: inline-block;
+    float: left;
+}
+
+#nine2 {
+    display: inline-block;
+    float: left
+}
+
+#nine3 {
+    display: inline-block;
+    float: left;
+}
+
+#nine4 {
+    display: inline-block;
+    float: left;
+}
