@@ -14,7 +14,7 @@
             <form id="floatForm">
                 <a href="index.html">Generate More Codes</a><br>
                 <input type="text">
-                <button type="button">Load</button>
+                <button type="button">Load images</button>
             </form>
 
         </div>
@@ -150,6 +150,38 @@
         });
     });
 
+    //outer drop???
+    $('#code11').on(
+        'dragover',
+        function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+    )
+    $('#code11').on(
+        'dragenter',
+        function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+    )
+    $('#code11').on(
+        'drop',
+        function(e) {
+            if (e.originalEvent.dataTransfer) {
+                if (e.originalEvent.dataTransfer.files.length) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    /*UPLOAD FILES HERE*/
+                    upload(e.originalEvent.dataTransfer.files);
+                }
+            }
+        }
+    );
+
+    function upload(files) {
+        alert('Upload ' + files.length + ' File(s).' + files.name);
+    }
 </script>
 
 </html>

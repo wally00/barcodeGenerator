@@ -144,7 +144,7 @@ h1 {
 }
 
 #floatForm {
-    z-index: 2;
+    z-index: 9999;
     position: fixed;
     background-color: beige;
     border: 1px solid black;
