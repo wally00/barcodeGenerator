@@ -59,8 +59,8 @@ h1 {
     text-align: center
 }
 
-body{
-    width: 810px;
+.bodyIndex{
+    width: 700px;
     margin: auto;
     
 }
@@ -94,18 +94,19 @@ body{
 
 .codeA4 {
     width: 200px;
-    height: 131px;
+    height: auto;
     border: 1px solid black;
-    display: block
+    display: block;
+    margin: 0 20px;
 }
 
 .nineCodes {
     float: left;
     width: 200px;
-    height: 1188px;
     margin-top: 10px;
-    background-color: aqua;
-    border: 1px solid red;
+    /*background-color: aqua;
+      border: 1px solid red;
+    */
 }
 
 #nine1 {
@@ -133,4 +134,21 @@ body{
     width: 100%;
     
     height: auto
+}
+
+.pdfPage {
+    size: a4 landscape;
+    border: 1px solid red;
+    margin: 0;
+    
+}
+
+#floatForm {
+    z-index: 2;
+    position: fixed;
+    background-color: beige;
+    border: 1px solid black;
+    padding: 10px;
+    float: right;
+    width: auto;
 }
