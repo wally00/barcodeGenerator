@@ -1,14 +1,14 @@
 #generator {
-    border: 2px solid black;
-    border-top-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    background-color: yellow;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background-color: #ffcb08;
     height: 150px;
     width: 680px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
 #genInput {
-    border: 0px solid blue;
+    border: 0px solid #CCC;
     display: inline;
     width: 49%;
     height: 99%;
@@ -23,15 +23,22 @@
     height: 99%;
     float: right;
     text-align: center;
-    background-color: white;
+    background-color: #ffcb08;
 }
 
 .inputBox {
-    padding: 10px 15px;
+    padding: 9px 15px;
     margin-right: 0;
     width: 200px;
-    margin: auto;
-    margin: 5px 20px;
+    margin: 10px 20px 0px 20px;
+    font-family: Trebuchet MS, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 10pt;
+    border-radius: 2px;
+    border-bottom-left-radius: 15px;
+    border: 1px solid #d71640;
+    background-color: #faffbd;
+    
 }
 
 #barcode {
@@ -44,11 +51,11 @@
 }
 
 #genCode {
-    border-bottom-right-radius: 20px;
+    border-top-right-radius: 15px;
 }
 
 #genName {
-    font: 20px monospace;
+    font: 20px Trebuchet MS, Helvetica Neue, Helvetica, Arial, sans-serif;
     margin-bottom: 0px;
     margin-top: 20px;
 }
@@ -59,10 +66,10 @@ h1 {
     text-align: center
 }
 
-.bodyIndex{
+.bodyIndex {
     width: 700px;
     margin: auto;
-    
+    background-color: #d71640;
 }
 
 #toImg {
@@ -70,8 +77,13 @@ h1 {
 }
 
 #submitBtn {
-    margin: 0;
-    margin-bottom: 5px;
+    border-radius: 2px;
+    background-color: #d71640;
+    width: 230px;
+    text-transform: uppercase;
+
+
+   
 }
 
 #fullCode {
@@ -132,7 +144,6 @@ h1 {
 .image {
     display: block;
     width: 100%;
-    
     height: auto
 }
 
@@ -140,7 +151,6 @@ h1 {
     size: a4 landscape;
     border: 1px solid red;
     margin: 0;
-    
 }
 
 #floatForm {
@@ -151,4 +161,33 @@ h1 {
     padding: 10px;
     float: right;
     width: auto;
+}
+
+.mainTitle {
+    font-family: Trebuchet MS, Helvetica Neue, Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #ffcb08;
+    text-shadow: 2px 2px 2px #333;
+}
+
+.codeHere {
+    font-family: Trebuchet MS, Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: #d71640;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 50px 30px;
+    margin-bottom: 5px;
+    font-size: 12pt;
+}
+
+.smallText {
+    font-family: Trebuchet MS, Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: #d71640;
+    text-transform: uppercase;
+    font-size: 8pt;
+}
+.boxShadow{
+     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2), 0 3px 3px 0 rgba(0, 0, 0, 0.24);
 }
