@@ -2,6 +2,7 @@
     border-top-right-radius: 15px;
     border-bottom-left-radius: 15px;
     background-color: #ffcb08;
+    border: 1px solid #d71640;
     height: 150px;
     width: 680px;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
