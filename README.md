@@ -1,2 +1,2 @@
 # barcodeGenerator
-simple barcode for Altex
+Generator de coduri de bare ale vanzatorilor, pentru scanare la case.

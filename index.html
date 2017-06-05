@@ -34,13 +34,26 @@
         </div>
     </div>
     <script type="text/javascript">
-
         //JS code to generate the barcode and image
         var submitBtn = document.getElementById('submitBtn');
 
-        submitBtn.onclick = function() {
-            var genName = document.getElementById('nume').value;
+        //submitBtn.onclick = genNew();
+        
+        submitBtn.addEventListener('click', () => {
+            if(document.getElementById('code').value === ''){
+                document.getElementById('canvasElement').innerHTML='<p class="codeHere">Trebuie sa completezi<br>codul de vanzator</p>'
+            } else {
+                genNew();
+            }
+        });
 
+
+        function genNew() {
+            var genName = document.getElementById('nume').value;
+            if(genName === ''){genName = '.';}else{genName = genName;}
+            
+
+            
             //removing the previous generated code(the fn code is @bottom)
             remove();
 
@@ -54,16 +67,14 @@
             var fullCode = document.getElementById('fullCode');
             fullCode.style.display = 'block';
 
-
-
             //render the fullCode element to canvas(img) and append to genCode element
             var renderedImg = html2canvas(document.getElementById('fullCode'), {
                 onrendered: function(canvas) {
                     var fullCode = document.getElementById('genCode');
 
                     canvas.setAttribute('id', 'canvasElement');
-                    canvas.setAttribute('class','boxShadow');
-                    canvas.style.border='1px solid #d71640';
+                    canvas.setAttribute('class', 'boxShadow');
+                    canvas.style.border = '1px solid #d71640';
                     fullCode.appendChild(canvas);
 
 

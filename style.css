@@ -42,6 +42,7 @@
     
 }
 
+
 #barcode {
     width: auto;
     margin: auto;
@@ -96,6 +97,8 @@ h1 {
 
 #canvasElement {
     margin-top: 10px;
+    height: 131px;
+    width: 320px;
 }
 
 #a4page {
