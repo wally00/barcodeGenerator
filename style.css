@@ -39,9 +39,7 @@
     border-bottom-left-radius: 15px;
     border: 1px solid #d71640;
     background-color: #faffbd;
-    
 }
-
 
 #barcode {
     width: auto;
@@ -83,9 +81,6 @@ h1 {
     background-color: #d71640;
     width: 230px;
     text-transform: uppercase;
-
-
-   
 }
 
 #fullCode {
@@ -192,6 +187,37 @@ h1 {
     text-transform: uppercase;
     font-size: 8pt;
 }
-.boxShadow{
-     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2), 0 3px 3px 0 rgba(0, 0, 0, 0.24);
+
+.boxShadow {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2), 0 3px 3px 0 rgba(0, 0, 0, 0.24);
+}
+
+@media screen and (max-width: 640px) {
+    #generator {
+        max-width: 400px;
+        height: 300px;
+    }
+    #genInput {
+        display: block;
+        width: 99%;
+        height: 150px;
+    }
+    #genCode {
+        display: block;
+        width: 99%;
+        margin: auto;
+        height: 150px;
+        border-bottom-left-radius: 15px;
+    }
+    .bodyIndex {
+	width: 400px;
+}
+
+    .codeHere {
+	text-align: center;
+}
+    #canvasElement {
+	margin: auto;
+}
+
 }
