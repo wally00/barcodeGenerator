@@ -43,12 +43,16 @@
             if(document.getElementById('code').value === ''){
                 
                 remove();
+                
                 var newElem = document.createElement('p');
                 newElem.setAttribute('class', 'codeHere');
-                newElem.setAttribute('id', 'canvasElement');
+                
+                var newDiv = document.createElement('div');
+                newDiv.setAttribute('id', 'canvasElement');
                 var newText = document.createTextNode('Trebuie sa completezi codul de vanzator');
+                newDiv.appendChild(newElem);
                 newElem.appendChild(newText);
-                document.getElementById('genCode').appendChild(newElem);
+                document.getElementById('genCode').appendChild(newDiv);
                 
                 //document.getElementById('canvasElement').innerHTML='<p class="codeHere">Trebuie sa completezi<br>codul de vanzator</p>'
             } else {
